@@ -5,7 +5,24 @@
 
 
 <p>{{testo}}</p>
-
+<button (click)="clickNew(inputTwoWayRef.value)">mostra two way value e comunica messaggio</button>
+<div>
+    <label> one way binding verso l'utente [value]="testo"</label>
+    <input [value]="testo" #inputPropertyRef>
+    <p>valore inputPropertyRef: {{inputPropertyRef.value}}</p>
+</div>
+<div>
+    <label> one way binding verso il codice (input)="testo = $event.target.value"</label>
+    <input (input)="inputEvent($event)" #inputEventRef>
+    <p>valore inputEventRef: {{inputEventRef.value}}</p>
+</div>
 <!-- i due esempi sotto sono equivalenti -->
-<input (input)="inputEvent($event)" [value]="testo">
-<input [(ngModel)]="testo">
+<div>
+    <label> two way binding "a mano"</label>
+    <input (input)="testo = inputTwoWayRef.value" [value]="testo" #inputTwoWayRef>
+    <p>valore inputTwoWayRef: {{inputTwoWayRef.value}}</p>
+</div>
+<div>
+    <label> two way binding con ngModel</label>
+    <input [(ngModel)]="testo">
+</div>

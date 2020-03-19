@@ -1,9 +1,13 @@
+<p *ngFor="let elemento of lista">{{elemento}}</p>
+
+<p [class.colorRed]="toggleStyle" [class.boldStyle]="!toggleStyle">{{titoloInput | lowercase}}</p>
+<p class="boldStyle">{{myDate}}</p>
+<p [ngClass]="myStyles">{{myDate | date:'longDate' | uppercase}}</p>
+<button (click)="toggleStyle = !toggleStyle">Toggle Style</button>
+
+
 <p>{{oggetto?.chiave}} </p>
 <p>{{oggetto1?.chiave}} </p>
-
-<div *ngFor="let pippo of lista">
-    {{pippo}}
-</div>
 <!-- Da preferire l'interpolazione, a meno che non si ha dell'html nella string -->
 <p>{{title}}</p>
 <p [innerHTML]="title"></p>
@@ -20,6 +24,3 @@
 <div>
     <a href="{{linkUrl}}">Link</a>
 </div>
-<p>{{titoloInput | lowercase}}</p>
-<p>{{myDate}}</p>
-<p>{{myDate | date:'longDate' | uppercase}}</p>
