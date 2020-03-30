@@ -8,6 +8,7 @@ import { PrimoComponent } from './primo/primo.component';
 import { SecondoComponent } from './secondo/secondo.component';
 import { CiclovitaComponent } from './ciclovita/ciclovita.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HighlightDirective } from './highlight.directive';
 
 const appRoutes: Routes = [
   { path: 'primo', component: PrimoComponent, data:{title:"Primo"} },
@@ -25,7 +26,8 @@ const appRoutes: Routes = [
     PrimoComponent,
     SecondoComponent,
     CiclovitaComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
