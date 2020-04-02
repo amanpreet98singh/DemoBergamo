@@ -9,8 +9,6 @@ import { ComunicazioneService } from '../comunicazione.service';
 })
 export class PrimoComponent implements OnInit {
 
-  color=null;
-
   lista: string[] = ['stringa1', 'stringa2', 'stringa3'];
 
 
@@ -45,10 +43,6 @@ export class PrimoComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  }
-
-  cambiaColore(){
-    this.color = this.color == null ? 'blue': null;
   }
 
 }

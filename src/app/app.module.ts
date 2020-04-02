@@ -9,9 +9,6 @@ import { CiclovitaComponent } from './ciclovita/ciclovita.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DemoBergamoRoutingModule } from './app-routing.module';
 import { MenuComponent } from './menu/menu.component';
-import { HighlightDirective } from './highlight.directive';
-import { UnlessDirective } from './unless.directive';
-import { ExponentialStrengthPipe } from './exponential-strength.pipe';
 
 @NgModule({
   declarations: [
@@ -20,10 +17,7 @@ import { ExponentialStrengthPipe } from './exponential-strength.pipe';
     SecondoComponent,
     CiclovitaComponent,
     PageNotFoundComponent,
-    MenuComponent,
-    HighlightDirective,
-    UnlessDirective,
-    ExponentialStrengthPipe
+    MenuComponent
   ],
   imports: [
     BrowserModule,
